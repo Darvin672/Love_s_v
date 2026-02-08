@@ -194,9 +194,18 @@
         </style>
     </head>
     <body>
-        <audio autoplay loop style="display:none">
+        <audio id="bgMusic" loop style="display:none">
   <source src="Love_s_v.mp3" type="audio/mpeg">
 </audio>
+
+<script>
+  document.addEventListener("click", () => {
+    const music = document.getElementById("bgMusic");
+    if (music.paused) {
+      music.play();
+    }
+  }, { once: true });
+</script>
         <div class="message">La amo 3 millones ❤️</div>
         <div id="bubbles-text"></div>
         <script src="script.js"></script>
